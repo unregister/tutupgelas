@@ -1,0 +1,28 @@
+{{ notification|raw }}
+<form method="post" action="contact/save">
+{% if contact.settings.show_name %}
+<input type="text" name="contact_name" id="contact_name" placeholder="Nama" /><br>
+{% endif %}
+{% if contact.settings.show_email %}
+<input type="text" name="contact_email" id="contact_email" placeholder="Email" /><br>
+{% endif %}
+{% if contact.settings.show_phone %}
+<input type="text" name="contact_phone" id="contact_phone" placeholder="Phone" /><br>
+{% endif %}
+{% if contact.settings.show_address %}
+<input type="text" name="contact_address" id="contact_address" placeholder="Alamat" /><br>
+{% endif %}
+{% if contact.settings.show_subject %}
+<input type="text" name="contact_subject" id="contact_subject" placeholder="Subject" /><br>
+{% endif %}
+{% if contact.settings.show_message %}
+<textarea name="contact_message" id="contact_message" placeholder="Pesan"></textarea><br>
+{% endif %}
+{% if contact.settings.show_captcha %}
+<img src="{{ captcha_url }}" /><br>
+<input type="text" name="contact_captcha" id="contact_captcha" placeholder="Captcha" /><br>
+{% endif %}
+
+<input type="submit" name="contact_save" id="contact_save" value="simpan">
+
+</form>

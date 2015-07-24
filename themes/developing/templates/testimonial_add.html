@@ -1,0 +1,27 @@
+{{ notification|raw }}
+<form method="post" action="testimonial/save" enctype="multipart/form-data">
+<input type="text" name="testimonial_name" id="testimonial_name" placeholder="Nama"><br>
+<input type="text" name="testimonial_email" id="testimonial_email" placeholder="Email"><br>
+
+{% if testimonial.settings.show_phone %}
+<input type="text" name="testimonial_phone" id="testimonial_phone" placeholder="Phone"><br>
+{% endif %}
+
+{% if testimonial.settings.show_website %}
+<input type="text" name="testimonial_website" id="testimonial_website" placeholder="Website"><br>
+{% endif %}
+
+{% if testimonial.settings.show_location %}
+<input type="text" name="testimonial_location" id="testimonial_location" placeholder="Lokasi"><br>
+{% endif %}
+
+{% if testimonial.settings.show_images %}
+<input type="file" name="testimonial_images" id="testimonial_images" placeholder="Photo"><br>
+{% endif %}
+
+{% if testimonial.settings.show_captcha %}
+<img src="{{ captcha_url }}" id="captcha_code" /><br>
+<input type="text" name="testimonial_captcha" id="testimonial_captcha" placeholder="Captcha"><br>
+{% endif %}
+<input type="submit" name="testimonial_save" id="testimonial_save" value="Simpan">
+</form>

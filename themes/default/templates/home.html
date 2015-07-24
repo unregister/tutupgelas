@@ -1,0 +1,43 @@
+ <div class="slider-wrapper">
+    <div class="slider">
+        <div class="slider-inner">
+            <div class="row">
+            	<div class="span1"></div>
+                <div class="images span10">
+                    <div class='iosSlider'>
+                        <div class='slider-content'>
+                        
+                        	{% if slideshow.image|length > 0 %}                            
+                                {% for slide in slideshow.image %}
+                                    <div class="slide">
+                                        <img sty src="{{ slide.image_url }}" alt="{{ slide.title }}" style="height:500px;" />                            	</div>
+                                {% endfor %}                            
+                            {% endif %}
+                        	                          
+                        </div><!-- /.slider-content -->
+                    </div><!-- .iosSlider -->
+
+                    <ul class="navigation">
+                       
+                       {% if slideshow.paging %}
+                       		{% for k,v in slideshow.paging %}
+                            	{% if v==1 %}
+                                	{% set active = ' class="active"' %}
+                                {% else %}
+                                	{% set active = '' %}
+                                {% endif %}
+                                
+                                <li{{ active }}><a>{{ v }}</a></li>
+                                
+                            {% endfor %}
+                       {% endif %}
+                       
+                        
+                    </ul><!-- /.navigation-->
+                </div><!-- /.images -->
+                <div class="span1"></div>
+                
+            </div><!-- /.row -->
+        </div><!-- /.slider-inner -->
+    </div><!-- /.slider -->
+</div><!-- /.slider-wrapper -->

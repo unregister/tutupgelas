@@ -1,0 +1,84 @@
+/* edited : 10-09-2009 */
+
+.wrapper-tab-pane-control {
+	position:	relative;
+	/*border-left: 1px solid rgb( 145, 155, 156 );
+	border-bottom: 1px solid rgb( 145, 155, 156 );*/
+	width:100%;
+}
+.wrapper-tab-pane-control ul.tab-panel {
+	margin: 0px;
+	padding: 0px;
+}
+.wrapper-tab-pane-control ul.tab-panel li {
+	z-index: 1;
+	white-space: nowrap;
+	display: inline;
+}
+.wrapper-tab-pane-control ul.tab-panel li a {
+	height: 18px;
+	float: left;
+	overflow: hidden;
+	background:url(def.gif) right;
+	cursor: pointer;
+	margin: 0px;
+	padding: 3px 0px 0px 0px;
+	z-index: 1;
+	font: 11px Tahoma, Helvetica, sans-serif;
+	text-decoration: none;
+	white-space: nowrap;
+	text-align: center;
+	border-top: 1px solid rgb( 145, 155, 156 );
+	border-bottom: 1px solid rgb( 145, 155, 156 );
+	color:#333;
+	font-weight:bold;
+	border-left:1px solid #919B9C;
+}
+.wrapper-tab-pane-control ul.tab-panel li a.selected {
+	height: 19px !important;
+	background:url(sel.gif) right;
+	border-bottom-width:0;
+	z-index: 3;
+	margin: 0px 0px -1px 0px;
+	padding: 3px 0px 0px 0px;
+	top:0px;
+	font: 11px Tahoma, Helvetica, sans-serif;
+	font-weight:bold;
+	border-left:1px solid #919B9C;
+}
+.wrapper-tab-pane-control ul.tab-panel li a:hover {
+	font:	11px Tahoma, Helvetica, sans-serif;
+	font-weight:bold;
+	height: 18px;
+	margin: 0px;
+	padding: 3px 0px 0px 0px;
+	background:url(hover.gif) right;
+}
+.wrapper-tab-pane-control .tab-page {
+	clear: both;
+	background:#fff url(spacer.gif) right repeat-y;
+	z-index: 2;
+	position: relative;
+	font: 11px Tahoma, Helvetica, sans-serif;
+	color: #333;
+	padding:0px; 
+	
+}
+.wrapper-tab-pane-control .in {
+	margin:0px;
+	padding:10px;
+}
+.wrapper-tab-pane-control .in img {
+	margin:0px;
+	padding:0px 10px 10px 0px;
+}
+.wrapper-tab-pane-control .tab-content {
+	display: none;
+}
+.wrapper-tab-pane-control .tab-loading {
+	height: 20px;
+	text-align:center;
+	padding: 2px 0px 0px 20px;
+	margin: 20px 0px 0px 15px;
+	background: url(loading.gif) no-repeat 40% 30%;
+}

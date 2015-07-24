@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{{ meta.site.title }} - {{ meta.site.site_name }}</title>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="{{ meta.site.description }}">
+    <meta name="keywords" content="{{ meta.site.keyword }}">
+    
+    <meta property="og:title" content="{{ meta.og.title }}"/>
+	<meta property="og:site_name" content="{{ meta.og.site_name }}"/>
+	<meta property="og:url" content="{{ meta.og.url }}"/>
+	<meta property="og:type" content="{{ meta.og.type }}"/>
+	<meta property="og:image" content="{{ meta.og.image }}"/>
+	<meta property="og:description" content="{{ meta.og.description }}"/>
+    
+</head>
+
+<body>
+{% include page %}
+</body>
+</html>

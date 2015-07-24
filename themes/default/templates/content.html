@@ -1,0 +1,18 @@
+<div class="row">    
+    <div class="span6">
+    	<h1 class="page-header">{{ content.title }}</h1>
+    
+                <div class="about-content">
+                <p>{{ content.content }}</p>
+                </div>    
+    
+    </div>
+    
+    <div class="span6">
+		<h2 class="page-header">&nbsp;</h2>
+        {% if image_url %}
+			<img src="{{ image_url }}" alt="{{ content.title }}">
+        {% endif %}
+    </div>
+
+</div>

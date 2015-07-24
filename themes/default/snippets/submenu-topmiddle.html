@@ -1,0 +1,10 @@
+{% for link in topmiddle %}
+    <li>
+        <a href="{{ link.url }}">{{ link.title }}</a>
+        {% if link.child %}
+            <ul class="subnav">
+                {% include "snippets/submenu-topmiddle.html" with {'topmiddle': link.child} %}
+            </ul>
+        {% endif %}
+    </li>
+{% endfor %}
